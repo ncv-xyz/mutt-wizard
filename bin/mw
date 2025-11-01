@@ -50,6 +50,7 @@ for x in "/etc/ssl/certs/ca-certificates.crt" \
 	"/etc/pki/tls/certs/ca-bundle.crt" "/etc/ssl/cert.pem" \
 	"/etc/ssl/ca-bundle.pem" "/etc/pki/tls/cacert.pem" \
 	"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" \
+	"/usr/local/etc/tls/cert.pem" \
 	"/usr/local/share/ca-certificates/"; do
 	[ -f "$x" ] && sslcert="$x" && break
 done || { echo "CA Certificate not found. Please install one or link it to /etc/ssl/certs/ca-certificates.crt" && exit 1; }

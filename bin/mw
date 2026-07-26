@@ -70,7 +70,6 @@ list() { getaccounts && [ -n "$accounts" ] && echo "$accounts" || exit 1; }
 
 prepmsmtp() {
 	mkdir -p "${msmtprc%/*}" "${msmtplog%/*}"
-	ln -s "$msmtprc" "$HOME/.msmtprc" 2>/dev/null
 	envsubst <"$msmtptemp" >>"$msmtprc"
 }
 
